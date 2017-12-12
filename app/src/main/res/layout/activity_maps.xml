@@ -1,0 +1,69 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/B_hotels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onClick"
+        android:text="Hotel"/>
+
+    <Button
+        android:id="@+id/B_sites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/B_hotels"
+        android:layout_toEndOf="@id/B_hotels"
+        android:onClick="onClick"
+        android:text="Tourist Sites"/>
+
+    <Button
+        android:id="@+id/B_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/B_sites"
+        android:layout_toEndOf="@id/B_sites"
+        android:onClick="onClick"
+        android:text="History"/>
+
+    <Button
+        android:id="@+id/B_check_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/B_history"
+        android:layout_toEndOf="@id/B_history"
+        android:onClick="onClick"
+        android:text="Check In"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/B_delete_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/B_history"
+        android:layout_toEndOf="@id/B_history"
+        android:onClick="onClick"
+        android:text="Remove Data"
+        android:visibility="gone"/>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.aldonesia.letstraveling.MapsActivity"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/B_hotels"/>
+
+
+</RelativeLayout>
+
